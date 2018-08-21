@@ -26,7 +26,6 @@
 <div class="tab-content" id="myTabContent">
   <div class="tab-pane fade show active" id="login" role="tabpanel" aria-labelledby="login-tab">
     <form id="login_form">
-      {{ csrf_field() }}
       <div class="form-group">
         <input type="text" class="form-control" id="mobile_login" name="mobile" placeholder="请输入手机号">
       </div>
@@ -36,12 +35,11 @@
       <div class="form-group">
         <a href="#">忘记密码</a>
       </div>
-      <button type="submit" class="btn btn-primary">登录</button>
+      <button type="button" class="btn btn-primary">登录</button>
     </form>
   </div>
   <div class="tab-pane fade" id="registe" role="tabpanel" aria-labelledby="registe-tab">
     <form id="reg_form">
-      {{ csrf_field() }}
       <div class="form-group row">
         <label for="mobile" class="col-sm-3 col-form-label">手机号</label>
         <div class="col-sm-9">
@@ -75,7 +73,7 @@
       <div class="form-group">
         <a href="/">已有帐号</a>
       </div>
-      <button type="submit" class="btn btn-primary">注册</button>
+      <button type="button" class="btn btn-primary">注册</button>
     </form>
   </div>
 </div>
@@ -85,9 +83,10 @@
             </div>
         </div>
 
-    <script src="/js/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="/js/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="/js/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="{{ asset('vendor/jsvalidation/js/jsvalidation.js')}}"></script>
     <script src="/js/user.js"></script>
 
     </body>
