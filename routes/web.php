@@ -15,5 +15,3 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::post('/user/login', 'UserController@login');
-Route::post('/user/registe', 'UserController@registe');
