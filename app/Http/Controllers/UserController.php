@@ -16,7 +16,7 @@ class UserController extends Controller
             $user['mobile'] = $mobile;
             $user['passwd'] = $passwd;
         }
-        return response()->json(['data' => $user], 200);
+        return $user;
     }
 
     public function registe(Request $request)
@@ -30,6 +30,6 @@ class UserController extends Controller
             $user['cfm_qrcode'] = $cfm_qrcode;
             $user['passwd'] = $passwd;
         }
-        return response()->json(['data' => $user], 200);
+        return $user;
     }
 }

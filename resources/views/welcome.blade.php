@@ -25,7 +25,8 @@
 </ul>
 <div class="tab-content" id="myTabContent">
   <div class="tab-pane fade show active" id="login" role="tabpanel" aria-labelledby="login-tab">
-    <form id="login_form">
+    <form id="login_form" method="post" action="/user/login">
+      <input type="hidden" name="_token" value="{{ csrf_token() }}" />
       <div class="form-group">
         <input type="text" class="form-control" id="mobile_login" name="mobile" placeholder="请输入手机号">
       </div>
@@ -39,7 +40,8 @@
     </form>
   </div>
   <div class="tab-pane fade" id="registe" role="tabpanel" aria-labelledby="registe-tab">
-    <form id="reg_form">
+    <form id="reg_form" method="post" action="/user/registe">
+      <input type="hidden" name="_token" value="{{ csrf_token() }}" />
       <div class="form-group row">
         <label for="mobile" class="col-sm-3 col-form-label">手机号</label>
         <div class="col-sm-9">

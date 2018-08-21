@@ -13,5 +13,5 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::middleware('auth:api')->post('/user/login', 'UserController@login');
-Route::middleware('auth:api')->post('/user/registe', 'UserController@registe');
+// Route::middleware('auth:api')->post('/user/login', 'UserController@login');
+// Route::middleware('auth:api')->post('/user/registe', 'UserController@registe');

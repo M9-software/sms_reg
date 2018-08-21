@@ -8,6 +8,7 @@ $(function(){
 
     // 登录
     $(btn_login_submit).on('click', function(){
+      /*
         var mobile = $('#mobile_login').val();
         var passwd = $('#passwd_login').val();
         var data = {
@@ -15,13 +16,16 @@ $(function(){
             passwd: passwd,
         };
         console.log('data = ', data);
-        $.post('/api/user/login', data, function(ret){
+        $.post('/user/login', data, function(ret){
             console.log('ret = ', ret);
         });
+        */
+        $('#login_form').submit();
     });
 
     // 注册
     $(btn_reg_submit).on('click', function(){
+        /*
         var mobile = $('#mobile_registe').val();
         var cfm_qrcode = $('#cfm_qrcode').val();
         var passwd = $('#passwd_registe').val();
@@ -31,9 +35,11 @@ $(function(){
             passwd: passwd,
         };
         console.log('data = ', data);
-        $.post('/api/user/registe', data, function(ret){
+        $.post('/user/registe', data, function(ret){
             console.log('ret = ', ret);
         });
+        */
+        $('#reg_form').submit();
     });
 
 });
