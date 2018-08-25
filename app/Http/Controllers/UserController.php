@@ -8,23 +8,39 @@ use Illuminate\Http\Request;
 class UserController extends Controller
 {
 
+    private $api_host = 'http://47.104.164.248';
+
+    public function imgcode(Request $request)
+    {
+        $api_url = $this->api_host.'/XCJPro/RandomCodeServlet';
+        $result = $this->curl_get($api_url);
+        return json_decode($result, true);
+    }
+
     public function qrcode(Request $request)
     {
-        $api_url = 'http://47.104.164.248//XCJPro/SendMsServlet';
-        $post_data = array(
-            'id' => '627',             // 图片验证码ID
-            'merImageCode' => '2IJV',       // 图片验证码内容
-            'merTel' => '18618363511',
-            'sign' => 1
-        );
-        $result = $this->curl_json($api_url, $post_data);
-        $data = json_decode($result, true);
-        print_r($data);exit();
+        $imgcode_id = $request->input('imgcode_id');
+        $imgcode = $request->input('imgcode');
+        $mobile = $request->input('mobile');
+
+        //if ($request->isMethod('post')) {
+            if ($imgcode_id && $imgcode) {
+                $api_url = $this->api_host.'/XCJPro/SendMsServlet';
+                $post_data = array(
+                    'id' => $imgcode_id,             // 图片验证码ID
+                    'merImageCode' => $imgcode,       // 图片验证码内容
+                    'merTel' => $mobile,
+                    'sign' => 1
+                );
+                $result = $this->curl_json($api_url, $post_data);
+                return json_decode($result, true);
+            }
+        //}
+        return [];
     }
 
     public function login(Request $request)
     {
-        $user = array();
         if ($request->isMethod('post')) {
             $mobile = $request->input('mobile');
             $passwd = $request->input('passwd');
@@ -32,22 +48,20 @@ class UserController extends Controller
             $user['merPassWord'] = $passwd;
             $user['merMac'] = '123456';
 
-            $api_url = 'http://47.104.164.248//XCJPro/LoginDServlet';
+            $api_url = $this->api_host.'/XCJPro/LoginDServlet';
             $result = $this->curl_json($api_url, $user);
             $data = json_decode($result, true);
-            print_r($data);exit();
 
             if ($data['code'] == '00000') {
-                // 跳转
+                // 设置SESSION跳转
                 return redirect('http://www.sina.com.cn');
             }
         }
-        return $user;
+        return [];
     }
 
     public function registe(Request $request)
     {
-        $user = array();
         if ($request->isMethod('post')) {
             $mobile = $request->input('mobile');
             $cfm_qrcode = $request->input('cfm_qrcode');
@@ -59,17 +73,16 @@ class UserController extends Controller
             $user['merPassWord'] = $passwd;
             $user['merMac'] = '12345';
 
-            $api_url = 'http://47.104.164.248//XCJPro/LoginServlet';
+            $api_url = $this->api_host.'/XCJPro/LoginServlet';
             $result = $this->curl_json($api_url, $user);
             $data = json_decode($result, true);
-            print_r($data);exit();
 
             if ($data['code'] == '00000') {
                 // 跳转
-                return redirect('http://www.sina.com.cn');
+                return redirect('/login');
             }
         }
-        return $user;
+        return [];
     }
 
     private function curl_get($url)
@@ -78,18 +91,6 @@ class UserController extends Controller
         curl_setopt($ch, CURLOPT_URL, $url);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
         curl_setopt($ch, CURLOPT_HEADER, 0);
-        $output = curl_exec($ch);
-        curl_close($ch);
-        return $output;
-    }
-
-    private function curl_post($url, $data)
-    {
-        $ch = curl_init();
-        curl_setopt($ch, CURLOPT_URL, $url);
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-        curl_setopt($ch, CURLOPT_POST, 1);
-        curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
         $output = curl_exec($ch);
         curl_close($ch);
         return $output;

@@ -20,7 +20,7 @@
     <a class="nav-link active" id="login-tab" data-toggle="tab" href="#login" role="tab" aria-controls="login" aria-selected="true">登录</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" id="registe-tab" data-toggle="tab" href="#registe" role="tab" aria-controls="registe" aria-selected="false">注册</a>
+    <a class="nav-link" href="/registe">注册</a>
   </li>
 </ul>
 <div class="tab-content" id="myTabContent">
@@ -37,45 +37,6 @@
         <a href="/forgot">忘记密码</a>
       </div>
       <button type="button" class="btn btn-primary">登录</button>
-    </form>
-  </div>
-  <div class="tab-pane fade" id="registe" role="tabpanel" aria-labelledby="registe-tab">
-    <form id="reg_form" method="post" action="/user/registe">
-      <input type="hidden" name="_token" value="{{ csrf_token() }}" />
-      <div class="form-group row">
-        <label for="mobile" class="col-sm-3 col-form-label">手机号</label>
-        <div class="col-sm-9">
-          <input type="text" class="form-control" id="mobile_reg" name="mobile" value="" placeholder="请输入11位数字手机号">
-        </div>
-      </div>
-      <div class="form-group row">
-        <label for="qrcode" class="col-sm-3 col-form-label">图形码</label>
-        <div class="col-sm-5">
-          <input type="text" class="form-control" id="qrcode" value="" placeholder="请输入图形码">
-        </div>
-        <div class="col-sm-4">
-          <img src="">
-        </div>
-      </div>
-      <div class="form-group row">
-        <label for="cfm_qrcode" class="col-sm-3 col-form-label">验证码</label>
-        <div class="col-sm-5">
-          <input type="text" class="form-control" id="cfm_qrcode" name="cfm_qrcode" value="" placeholder="">
-        </div>
-        <div class="col-sm-4">
-          <a href="" class="btn btn-success">获取验证码</a>
-        </div>
-      </div>
-      <div class="form-group row">
-        <label for="passwd" class="col-sm-3 col-form-label">密码</label>
-        <div class="col-sm-9">
-          <input type="password" class="form-control" id="passwd_reg" name="passwd" placeholder="Password">
-        </div>
-      </div>
-      <div class="form-group">
-        <a href="/">已有帐号</a>
-      </div>
-      <button type="button" class="btn btn-primary">注册</button>
     </form>
   </div>
 </div>

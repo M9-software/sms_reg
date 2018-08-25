@@ -19,10 +19,15 @@ Route::get('/login', function () {
     return view('login');
 });
 
+Route::get('/registe', function () {
+    return view('registe');
+});
+
 Route::get('/forgot', function () {
     return view('forgot');
 });
 
+Route::get('/imgcode', 'UserController@imgcode');
 Route::get('/qrcode', 'UserController@qrcode');
 Route::post('/user/login', 'UserController@login');
 Route::post('/user/registe', 'UserController@registe');
