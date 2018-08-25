@@ -12,20 +12,25 @@
     <body>
         <div class="container">
             <div class="row">
-<nav id="navbar" class="col-sm-12 navbar navbar-light bg-light">
-  <a class="navbar-brand" href="#">LOGO</a>
-  <ul class="nav nav-pills">
-    <li class="nav-item">
-      <a class="btn btn-default nav-link" href="/login">登录</a>
-    </li>
-    <li class="nav-item">
-      <a class="btn btn-success nav-link" href="/login">注册</a>
-    </li>
-  </ul>
-</nav>
-            </div>
-            <div class="row">
-公司介绍
+                <div class="col-sm">&nbsp;</div>
+                <div class="col-sm">
+
+<div class="tab-content" id="myTabContent">
+  <div class="tab-pane fade show active" id="login" role="tabpanel" aria-labelledby="login-tab">
+    <form id="forgot_form" method="post" action="/user/forgot">
+      <input type="hidden" name="_token" value="{{ csrf_token() }}" />
+      <div class="form-group">
+        <input type="text" class="form-control" id="mobile_login" name="mobile" placeholder="请输入手机号">
+      </div>
+      <div class="form-group">
+        <input type="password" class="form-control" id="passwd_login" name="passwd" placeholder="Password">
+      </div>
+    </form>
+  </div>
+</div>
+
+                </div>
+                <div class="col-sm">&nbsp;</div>
             </div>
         </div>
 
