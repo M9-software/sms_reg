@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class UserController extends Controller
 {
 
-    private $api_host = 'http://47.104.164.248';
+    private $api_host = 'http://www.xingchengju.com.cn';// 47.104.164.248';
 
     public function imgcode(Request $request)
     {
