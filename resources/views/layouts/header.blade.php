@@ -9,7 +9,13 @@
   <!-- <link rel="stylesheet" href="css/bootstrap/bootstrap-grid.css"> -->
   <link rel="stylesheet" type="text/css" href="/css/style.css">
   <link rel="stylesheet" type="text/css" href="/css/common.css">
-  <title>{{ title }}</title>
+<!-- vendors -->
+<script src="/js/vendors/jquery-1.12.4.min.js"></script>
+<link rel="stylesheet" href="/css/vendors/swiper-4.1.6.min.css">
+<script src="/js/vendors/swiper-4.1.6.min.js"></script>
+<script src="/js/global.js"></script>
+<!-- /vendors -->
+  <title>@yield('title', 'w')</title>
 </head>
 <body>
 
@@ -21,7 +27,7 @@
     <div class="row">
       <div class="navbar-brand">
         <a href="#">
-          <img src="/images/logo.png" alt="">
+          <img src="/image/logo.png" alt="">
         </a>
       </div>
       <div class="navbar-nav-btn">

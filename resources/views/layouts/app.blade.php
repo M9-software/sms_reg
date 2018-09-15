@@ -7,11 +7,11 @@
   <div class="container">
     <div class="row">
       <div class="col-pic">
-        <img class="img1" src="images/code-text01.png" alt="">
-        <img class="img2" src="images/code-text02.png" alt="">
+        <img class="img1" src="image/code-text01.png" alt="">
+        <img class="img2" src="image/code-text02.png" alt="">
       </div>
       <div class="col-text">
-        <img src="images/code.png" alt="">
+        <img src="image/code.png" alt="">
         <p>Android扫码下载</p>
       </div>
     </div>

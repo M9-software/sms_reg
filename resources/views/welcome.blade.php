@@ -1,4 +1,4 @@
-@entends('layouts/app')
+@extends('layouts/app')
 
 @section('title', 'Welcome')
 
@@ -57,7 +57,7 @@
       </div>
       <div class="col-xs-2 col-lg-2 ">
         <div class="realtime-app-download">
-          <img src="images/u20.png" alt="">
+          <img src="image/u20.png" alt="">
           <p>Android<br/>扫码下载APP</p>
         </div>
       </div>

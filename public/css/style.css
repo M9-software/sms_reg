@@ -2776,7 +2776,7 @@ html {
   }
   /* realtime-feeling */
   .realtime-feeling {
-    background: url("../images/realtime.png") no-repeat center center;
+    background: url("../image/realtime.png") no-repeat center center;
     background-size: cover;
     padding: 35px 0;
   }
@@ -3158,7 +3158,7 @@ html {
   }
   /* realtime-feeling */
   .realtime-feeling {
-    background: url("../images/realtime.png") no-repeat center center;
+    background: url("../image/realtime.png") no-repeat center center;
     background-size: cover;
     padding: 50px 0;
   }
@@ -3282,7 +3282,7 @@ html {
     *zoom: 1;
     width: 8px;
     height: 8px;
-    background: url("../images/u47.png") no-repeat center center;
+    background: url("../image/u47.png") no-repeat center center;
     background-size: cover;
     margin-left: 3px;
   }
@@ -3303,7 +3303,7 @@ html {
   .classification-type-tabs ul li a:after {
     width: 12px;
     height: 12px;
-    background: url("../images/u47.png") no-repeat center center;
+    background: url("../image/u47.png") no-repeat center center;
     background-size: cover;
   }
 }

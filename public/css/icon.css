@@ -5,7 +5,7 @@
 }
 
 .icon-heart01 {
-  background-image: url(../images/sprite.png);
+  background-image: url(../image/sprite.png);
   background-position: -52px 0px;
   background-size: 83px 64px;
   width: 31px;
@@ -13,7 +13,7 @@
 }
 
 .icon-heart02 {
-  background-image: url(../images/sprite.png);
+  background-image: url(../image/sprite.png);
   background-position: 0px -78px;
   background-size: 83px 64px;
   width: 20.5px;
@@ -21,7 +21,7 @@
 }
 
 .icon-heart03 {
-  background-image: url(../images/sprite.png);
+  background-image: url(../image/sprite.png);
   background-position: -20.5px -78px;
   background-size: 83px 64px;
   width: 22.5px;
@@ -29,7 +29,7 @@
 }
 
 .icon-scope02 {
-  background-image: url(../images/sprite.png);
+  background-image: url(../image/sprite.png);
   background-position: 0px 0px;
   background-size: 83px 64px;
   width: 52px;
