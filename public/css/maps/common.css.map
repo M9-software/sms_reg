@@ -1,0 +1,1 @@
+{"version":3,"sources":["_mixin.scss"],"names":[],"mappings":";AAAkB,YAAA","file":"../common.css","sourcesContent":["@charset \"UTF-8\"; /*sass变量*/\r\n$mainColor: #04A3EE;\r\n@mixin clearfix() {\r\n  &::after {\r\n    display: block;\r\n    content: \"\";\r\n    clear: both;\r\n  }\r\n}\r\n"]}
