@@ -34,19 +34,19 @@
         <div class="navbar-nav">
           <ul>
             <li class="active">
-              <a href="#">实时异情</a>
+              <a href="/">实时异情</a>
             </li>
             <li>
-              <a href="#">功能介绍</a>
+              <a href="/about">功能介绍</a>
             </li>
             <li>
-              <a href="#">论坛</a>
+              <a href="/forum">论坛</a>
             </li>
           </ul>
         </div>
         <div class="navbar-btn">
-          <a class="" href="#">登录</a>
-          <a class="active" href="#">免费注册</a>
+          <a class="" href="/login">登录</a>
+          <a class="active" href="/registe">免费注册</a>
         </div>
       </div>
 
