@@ -45,8 +45,12 @@
           </ul>
         </div>
         <div class="navbar-btn">
+        @if (!empty($s))
+            user
+        @else
           <a class="" href="/login">登录</a>
           <a class="active" href="/registe">免费注册</a>
+        @endif
         </div>
       </div>
 
