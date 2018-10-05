@@ -102,203 +102,76 @@
         <div class="swiper-wrapper">
           <div class="swiper-slide">
             <ul>
-              <li>
-                <a href="#">北京高速公路</a>
-              </li>
-              <li>
-                <a href="#">北京高速公路</a>
-              </li>
-              <li>
-                <a href="#">北京高速公路</a>
-              </li>
-              <li>
-                <a href="#">北京高速公路</a>
-              </li>
-              <li>
-                <a href="#">北京高速公路</a>
-              </li>
-              <li>
-                <a href="#">北京高速公路</a>
-              </li>
-              <li>
-                <a href="#">北京高速公路</a>
-              </li>
-              <li>
-                <a href="#">北京高速公路</a>
-              </li>
-              <li>
-                <a href="#">北京高速公路</a>
-              </li>
-              <li>
-                <a href="#">北京高速公路</a>
-              </li>
-              <li>
-                <a href="#">北京高速公路</a>
-              </li>
-              <li>
-                <a href="#">北京高速公路</a>
-              </li>
-              <li>
-                <a href="#">北京高速公路</a>
-              </li>
-              <li>
-                <a href="#">北京高速公路</a>
-              </li>
-              <li>
-                <a href="#">北京高速公路</a>
-              </li>
-              <li>
-                <a href="#">北京高速公路</a>
-              </li>
-              <li>
-                <a href="#">北京高速公路</a>
-              </li>
-              <li>
-                <a href="#">北京高速公路</a>
-              </li>
-              <li>
-                <a href="#">北京高速公路</a>
-              </li>
-              <li>
-                <a href="#">北京高速公路</a>
-              </li>
-              <li>
-                <a href="#">北京高速公路</a>
-              </li>
-              <li>
-                <a href="#">北京高速公路</a>
-              </li>
-              <li>
-                <a href="#">北京高速公路</a>
-              </li>
-              <li>
-                <a href="#">北京高速公路</a>
-              </li>
-              <li>
-                <a href="#">北京高速公路</a>
-              </li>
-              <li>
-                <a href="#">北京高速公路</a>
-              </li>
-              <li>
-                <a href="#">北京高速公路</a>
-              </li>
-              <li>
-                <a href="#">北京高速公路</a>
-              </li>
-              <li>
-                <a href="#">北京高速公路</a>
-              </li>
-              <li>
-                <a href="#">北京高速公路</a>
-              </li>
-              <li>
-                <a href="#">北京高速公路</a>
-              </li>
-              <li>
-                <a href="#">北京高速公路</a>
-              </li>
-              <li>
-                <a href="#">北京高速公路</a>
-              </li>
-              <li>
-                <a href="#">北京高速公路</a>
-              </li>
-              <li>
-                <a href="#">北京高速公路</a>
-              </li>
-              <li>
-                <a href="#">北京高速公路</a>
-              </li>
-              <li>
-                <a href="#">北京高速公路</a>
-              </li>
-              <li>
-                <a href="#">北京高速公路</a>
-              </li>
-              <li>
-                <a href="#">北京高速公路</a>
-              </li>
-              <li>
-                <a href="#">北京高速公路</a>
-              </li>
-              <li>
-                <a href="#">北京高速公路</a>
-              </li>
-              <li>
-                <a href="#">北京高速公路</a>
-              </li>
-              <li>
-                <a href="#">北京高速公路</a>
-              </li>
-              <li>
-                <a href="#">北京高速公路</a>
-              </li>
-              <li>
-                <a href="#">北京高速公路</a>
-              </li>
-              <li>
-                <a href="#">北京高速公路</a>
-              </li>
-              <li>
-                <a href="#">北京高速公路</a>
-              </li>
-              <li>
-                <a href="#">北京高速公路</a>
-              </li>
+              <li> <a href="#">广东高速</a> </li>
+              <li> <a href="#">重庆高速</a> </li>
+              <li> <a href="#">北京高速</a> </li>
+              <li> <a href="#">天津高速</a> </li>
+              <li> <a href="#">上海高速</a> </li>
+              <li> <a href="#">深圳高速</a> </li>
+              <li> <a href="#">浙江高速</a> </li>
+              <li> <a href="#">江苏高速</a> </li>
+              <li> <a href="#">安徽高速</a> </li>
+              <li> <a href="#">山东高速</a> </li>
+              <li> <a href="#">河南高速</a> </li>
+              <li> <a href="#">湖北高速</a> </li>
+              <li> <a href="#">湖南高速</a> </li>
+              <li> <a href="#">江西高速</a> </li>
+              <li> <a href="#">福建高速</a> </li>
+              <li> <a href="#">广西高速</a> </li>
+              <li> <a href="#">云南高速</a> </li>
+              <li> <a href="#">贵州高速</a> </li>
+              <li> <a href="#">四川高速</a> </li>
+              <li> <a href="#">陕西高速</a> </li>
+              <li> <a href="#">山西高速</a> </li>
+              <li> <a href="#">河北高速</a> </li>
+              <li> <a href="#">黑龙江高速</a> </li>
+              <li> <a href="#">吉林高速</a> </li>
+              <li> <a href="#">辽宁高速</a> </li>
+              <li> <a href="#">内蒙古高速</a> </li>
+              <li> <a href="#">宁夏高速</a> </li>
+              <li> <a href="#">甘肃高速</a> </li>
+              <li> <a href="#">青海高速</a> </li>
+              <li> <a href="#">新疆高速</a> </li>
+              <li> <a href="#">西藏高速</a> </li>
+              <li> <a href="#">海南高速</a> </li>
 
             </ul>
           </div>
           <div class="swiper-slide">
             <ul>
-              <li>
-                <a href="#">北京高速公路</a>
-              </li>
-              <li>
-                <a href="#">北京高速公路</a>
-              </li>
-              <li>
-                <a href="#">北京高速公路</a>
-              </li>
-              <li>
-                <a href="#">北京高速公路</a>
-              </li>
-              <li>
-                <a href="#">北京高速公路</a>
-              </li>
-              <li>
-                <a href="#">北京高速公路</a>
-              </li>
-              <li>
-                <a href="#">北京高速公路</a>
-              </li>
-              <li>
-                <a href="#">北京高速公路</a>
-              </li>
-              <li>
-                <a href="#">北京高速公路</a>
-              </li>
-              <li>
-                <a href="#">北京高速公路</a>
-              </li>
-              <li>
-                <a href="#">北京高速公路</a>
-              </li>
-              <li>
-                <a href="#">北京高速公路</a>
-              </li>
-              <li>
-                <a href="#">北京高速公路</a>
-              </li>
-              <li>
-                <a href="#">北京高速公路</a>
-              </li>
-              <li>
-                <a href="#">北京高速公路</a>
-              </li>
-              <li>
-                <a href="#">北京高速公路</a>
-              </li>
+              <li> <a href="#">G6京藏高速</a> </li>
+              <li> <a href="#">G2京沪高速</a> </li>
+              <li> <a href="#">G3京台高速</a> </li>
+              <li> <a href="#">G5京昆高速</a> </li>
+              <li> <a href="#">G1京哈高速</a> </li>
+              <li> <a href="#">G4京港澳高速</a> </li>
+              <li> <a href="#">G7京新高速</a> </li>
+              <li> <a href="#">G11鹤大高速</a> </li>
+              <li> <a href="#">G15沈海高速</a> </li>
+              <li> <a href="#">G25长深高速</a> </li>
+              <li> <a href="#">G35济广高速</a> </li>
+              <li> <a href="#">G45大广高速</a> </li>
+              <li> <a href="#">G55二广高速</a> </li>
+              <li> <a href="#">G65包茂高速</a> </li>
+              <li> <a href="#">G75兰海高速</a> </li>
+              <li> <a href="#">G85渝昆高速</a> </li>
+              <li> <a href="#">G10绥满高速</a> </li>
+              <li> <a href="#">G12珲乌高速</a> </li>
+              <li> <a href="#">G16丹锡高速</a> </li>
+              <li> <a href="#">G18荣乌高速</a> </li>
+              <li> <a href="#">G20青银高速</a> </li>
+              <li> <a href="#">G22青兰高速</a> </li>
+              <li> <a href="#">G30连霍高速</a> </li>
+              <li> <a href="#">G36宁洛高速</a> </li>
+              <li> <a href="#">G40沪陕高速</a> </li>
+              <li> <a href="#">G42沪蓉高速</a> </li>
+              <li> <a href="#">G50沪渝高速</a> </li>
+              <li> <a href="#">G56杭瑞高速</a> </li>
+              <li> <a href="#">G60沪昆高速</a> </li>
+              <li> <a href="#">G70福银高速</a> </li>
+              <li> <a href="#">G72泉南高速</a> </li>
+              <li> <a href="#">G76厦蓉高速</a> </li>
+              <li> <a href="#">G78汕昆高速</a> </li>
 
             </ul>
           </div>
