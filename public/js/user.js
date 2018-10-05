@@ -1,23 +1,23 @@
 $(function(){
 
-    var btn_login_submit = $('#login_form').find('button[type="button"]');
-
-    console.log('btn_login_submit = ', btn_login_submit);
-
     // 登录
-    $(btn_login_submit).on('click', function(){
-      /*
+    $('button.login-btn').on('click', function(){
         var mobile = $('#mobile_login').val();
         var passwd = $('#passwd_login').val();
-        var data = {
-            mobile: mobile,
-            passwd: passwd,
-        };
-        console.log('data = ', data);
-        $.post('/user/login', data, function(ret){
-            console.log('ret = ', ret);
-        });
-        */
+        // console.log('mobile = ', mobile);
+        // console.log('passwd = ', passwd);
+        if (!mobile) {
+            alert('请输入手机号');
+            return false;
+        }
+        if (mobile.length != 11 || !/^[0-9]*$/.test(mobile)) {
+            alert('手机号必须为11位数字');
+            return false;
+        }
+        if (!passwd) {
+            alert('请输入密码');
+            return false;
+        }
         $('#login_form').submit();
     });
 

@@ -23,68 +23,62 @@ class UserController extends Controller
         $imgcode = $request->input('imgcode');
         $mobile = $request->input('mobile');
 
-        //if ($request->isMethod('post')) {
-            if ($imgcode_id && $imgcode) {
-                $api_url = $this->api_host.'/XCJPro/SendMsServlet';
-                $post_data = array(
-                    'id' => $imgcode_id,             // 图片验证码ID
-                    'merImageCode' => $imgcode,       // 图片验证码内容
-                    'merTel' => $mobile,
-                    'sign' => 1
-                );
-                $result = $this->curl_json($api_url, $post_data);
-                return json_decode($result, true);
-            }
-        //}
+        if ($imgcode_id && $imgcode) {
+            $api_url = $this->api_host.'/XCJPro/SendMsServlet';
+            $post_data = array(
+                'id' => $imgcode_id,             // 图片验证码ID
+                'merImageCode' => $imgcode,       // 图片验证码内容
+                'merTel' => $mobile,
+                'sign' => 1
+            );
+            $result = $this->curl_json($api_url, $post_data);
+            return json_decode($result, true);
+        }
         return [];
     }
 
     public function login(Request $request)
     {
-        if ($request->isMethod('post')) {
-            $mobile = $request->input('mobile');
-            $passwd = $request->input('passwd');
-            $user['merTel'] = $mobile;
-            $user['merPassWord'] = $passwd;
-            $user['merMac'] = '123456';
+        $mobile = $request->input('mobile');
+        $passwd = $request->input('passwd');
+        $user['merTel'] = $mobile;
+        $user['merPassWord'] = $passwd;
+        $user['merMac'] = '123456';
 
-            $api_url = $this->api_host.'/XCJPro/LoginDServlet';
-            $result = $this->curl_json($api_url, $user);
-            $data = json_decode($result, true);
+        $api_url = $this->api_host.'/XCJPro/LoginDServlet';
+        $result = $this->curl_json($api_url, $user);
+        $data = json_decode($result, true);
 
-            if ($data['code'] == '00000') {
-                // 设置SESSION跳转
-                $session_key = 'xingJuYuan_User.session';
-                session([$session_key => $result]);
-                return redirect('/');
-            } else {
-                return redirect('/login')->with('message', $data['responseMsg']);
-            }
+        if ($data['code'] == '00000') {
+            // 设置SESSION跳转
+            $session_key = 'xingJuYuan_User.session';
+            session([$session_key => $result]);
+            return redirect('/');
+        } else {
+            return redirect('/login')->with('message', $data['responseMsg']);
         }
         return [];
     }
 
     public function registe(Request $request)
     {
-        if ($request->isMethod('post')) {
-            $mobile = $request->input('mobile');
-            $cfm_qrcode = $request->input('cfm_qrcode');
-            $passwd = $request->input('passwd');
+        $mobile = $request->input('mobile');
+        $cfm_qrcode = $request->input('cfm_qrcode');
+        $passwd = $request->input('passwd');
 
-            $user['operType'] = '1';
-            $user['merTel'] = $mobile;
-            $user['merIdCode'] = $cfm_qrcode;
-            $user['merPassWord'] = $passwd;
-            $user['merMac'] = '12345';
+        $user['operType'] = '1';
+        $user['merTel'] = $mobile;
+        $user['merIdCode'] = $cfm_qrcode;
+        $user['merPassWord'] = $passwd;
+        $user['merMac'] = '12345';
 
-            $api_url = $this->api_host.'/XCJPro/LoginServlet';
-            $result = $this->curl_json($api_url, $user);
-            $data = json_decode($result, true);
+        $api_url = $this->api_host.'/XCJPro/LoginServlet';
+        $result = $this->curl_json($api_url, $user);
+        $data = json_decode($result, true);
 
-            if ($data['code'] == '00000') {
-                // 跳转
-                return redirect('/login');
-            }
+        if ($data['code'] == '00000') {
+            // 跳转
+            return redirect('/login');
         }
         return [];
     }
