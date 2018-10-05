@@ -54,7 +54,11 @@ class UserController extends Controller
 
             if ($data['code'] == '00000') {
                 // 设置SESSION跳转
-                return redirect('http://www.sina.com.cn');
+                $session_key = 'xingJuYuan_User.session';
+                session([$session_key => $result]);
+                return redirect('/');
+            } else {
+                return redirect('/login')->with('message', $data['responseMsg']);
             }
         }
         return [];

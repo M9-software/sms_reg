@@ -11,23 +11,16 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
-Route::get('/login', function () {
-    return view('login');
-});
+Route::get('/', 'HomeController@index');
+Route::get('/about', 'HomeController@about');
 
-Route::get('/registe', function () {
-    return view('registe');
-});
-
-Route::get('/forgot', function () {
-    return view('forgot');
-});
+Route::get('/login', 'HomeController@login');
+Route::get('/registe', 'HomeController@registe');
+Route::get('/forgot', 'HomeController@forgot');
 
 Route::get('/imgcode', 'UserController@imgcode');
 Route::get('/qrcode', 'UserController@qrcode');
 Route::post('/user/login', 'UserController@login');
 Route::post('/user/registe', 'UserController@registe');
+
