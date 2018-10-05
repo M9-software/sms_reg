@@ -7,7 +7,12 @@
   <div class="container">
     <div class="row">
 
-       <div class="col-sm">&nbsp;</div>
+        <div class="col-sm">
+          <div class="col-text">
+            <img src="image/code.png" alt="">
+            <p>Android扫码下载</p>
+          </div>
+        </div>
         <div class="col-sm">
 
 <ul class="nav nav-tabs" id="myTab" role="tablist">
