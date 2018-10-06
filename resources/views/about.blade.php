@@ -39,15 +39,20 @@
     </div>
   </div>
 </section>
-<div class="container" style="background: #edf2f6;">
-  <div class="row">
-    <div class="col-sm">
-      <img src="image/about_2.png" width="380" style="margin: 20px;">
-    </div>
-    <div class="col-sm">
-<div class="about_title">全国高速分类</div>
-<p><img src="image/about_line.png" ></p>
-<div class="about_content">拥有全面的高速分类，分别有国家级（162条高速）、省级（239条高速）、路段（72条高速）、各省（31个省市），点击查看各个高速的实时路况异情详情，可语音播报与文字信息同步查看。</div>
+
+<section class="classification-type">
+  <div class="classification-type-tabs">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm">
+          <img src="image/about_2.png" width="380" style="margin: 20px;">
+        </div>
+        <div class="col-sm">
+          <div class="about_title">全国高速分类</div>
+          <p><img src="image/about_line.png" ></p>
+          <div class="about_content">拥有全面的高速分类，分别有国家级（162条高速）、省级（239条高速）、路段（72条高速）、各省（31个省市），点击查看各个高速的实时路况异情详情，可语音播报与文字信息同步查看。</div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
@@ -63,15 +68,19 @@
     </div>
   </div>
 </div>
-<div class="container" style="background: #edf2f6;">
-  <div class="row">
-    <div class="col-sm">
-      <img src="image/about_4.png" width="380" style="margin: 20px;">
-    </div>
-    <div class="col-sm">
-<div class="about_title">指定路线播报异情</div>
-<p><img src="image/about_line.png" ></p>
-<div class="about_content">支持手动、语音识别、选择等多种输入方式搜索，搜索结果提供1-3种出行方案，提供语音播报与文字展示，边看边听解放双手更安全。设为常用路线后，可随时一键查看路段异情。</div>
+<section class="classification-type">
+  <div class="classification-type-tabs">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm">
+          <img src="image/about_4.png" width="380" style="margin: 20px;">
+        </div>
+        <div class="col-sm">
+          <div class="about_title">指定路线播报异情</div>
+          <p><img src="image/about_line.png" ></p>
+          <div class="about_content">支持手动、语音识别、选择等多种输入方式搜索，搜索结果提供1-3种出行方案，提供语音播报与文字展示，边看边听解放双手更安全。设为常用路线后，可随时一键查看路段异情。</div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
