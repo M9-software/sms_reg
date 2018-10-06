@@ -1,6 +1,7 @@
 @extends('layouts/app')
 
 @section('title', 'Welcome')
+@section('default_active', 'active')
 
 @section('content')
 <section class="realtime-feeling">

@@ -33,13 +33,13 @@
       <div class="navbar-nav-btn">
         <div class="navbar-nav">
           <ul>
-            <li class="active">
+            <li class="@yield('default_active', '')">
               <a href="/">实时异情</a>
             </li>
-            <li>
+            <li class="@yield('about_active', '')">
               <a href="/about">功能介绍</a>
             </li>
-            <li>
+            <li class="">
               <a href="/forum">论坛</a>
             </li>
           </ul>
