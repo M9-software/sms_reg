@@ -10,36 +10,45 @@
   margin-top: 10px;
   margin-left: 20px;
 }
-button.login-btn {
-  font-size: 14px;
-  height: 30px;
-  width: 200px;
-  background: #2aa8f2;
-  border: #2aa8f2;
-  color: #fff !important;
-}
 .nav-tab {
-  width: 300px;
+  width: 100%;
   height: 40px;
   margin: 5px;
 }
 .nav-link {
-  width: 150px;
+  width: 50%;
   height: 40px;
   float: left;
   text-align: center;
   font-size: 20px;
-  background: #d7ecf9;
+  color: #333;
+  background: #6dc2f5;
 }
 .nav-link.active {
-  background: #2aa8f2;
+  color: #333;
+  background: #d7ecf9;
 }
 .tab-pane {
-  width: 300px;
+  width: 100%;
   height: 200px;
   background: #d7ecf9;
   padding: 5px;
   margin: 5px;
+}
+.form-group {
+  margin: 10px;
+}
+.form-control {
+  width: 100%;
+  height: 40px;
+}
+button.login-btn {
+  font-size: 14px;
+  height: 30px;
+  width: 100%;
+  background: #2aa8f2;
+  border: #2aa8f2;
+  color: #fff !important;
 }
 </style>
 
@@ -59,7 +68,7 @@ button.login-btn {
   <a class="nav-link active" href="javascript: void(0);">登录</a>
   <a class="nav-link" href="/registe">注册</a>
 </ul>
-<div class="tab-content">
+<div class="tab-content" style="margin-top: -5px; margin-bottom: 50px;">
   <div class="tab-pane fade show active">
     <form id="login_form" method="post" action="/user/login">
       <input type="hidden" name="_token" value="{{ csrf_token() }}" />
@@ -72,7 +81,9 @@ button.login-btn {
       <div class="form-group">
         <a href="/forgot">忘记密码</a>
       </div>
-      <button class="login-btn">登录</button>
+      <div class="form-group">
+        <button class="login-btn">登录</button>
+      </div>
     </form>
   </div>
 </div>

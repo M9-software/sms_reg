@@ -1,24 +1,28 @@
 $(function(){
 
-    var btn_reg_submit = $('#reg_form').find('button[type="button"]');
-    console.log('btn_reg_submit = ', btn_reg_submit);
+    var btn_reg_submit = $('#btn_reg');
 
     // 注册
     $(btn_reg_submit).on('click', function(){
-        /*
         var mobile = $('#mobile_registe').val();
         var cfm_qrcode = $('#cfm_qrcode').val();
         var passwd = $('#passwd_registe').val();
-        var data = {
-            mobile: mobile,
-            cfm_qrcode: cfm_qrcode,
-            passwd: passwd,
-        };
-        console.log('data = ', data);
-        $.post('/user/registe', data, function(ret){
-            console.log('ret = ', ret);
-        });
-        */
+        if (!mobile) {
+            alert('请输入手机号');
+            return false;
+        }
+        if (mobile.length != 11 || !/^[0-9]*$/.test(mobile)) {
+            alert('手机号必须为11位数字');
+            return false;
+        }
+        if (!cfm_qrcode) {
+            alert('请输入验证码');
+            return false;
+        }
+        if (!passwd) {
+            alert('请输入密码');
+            return false;
+        }
         $('#reg_form').submit();
     });
 
