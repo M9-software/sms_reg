@@ -1,6 +1,6 @@
 @extends('layouts/app')
 
-@section('title', 'Welcome')
+@section('title', '实时异情')
 @section('default_active', 'active')
 
 @section('content')
