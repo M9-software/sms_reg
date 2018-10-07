@@ -46,7 +46,7 @@
         </div>
         <div class="navbar-btn">
         @if (!empty($s))
-            user
+          <img src="image/user.png" width="50">
         @else
           <a class="" href="/login">登录</a>
           <a class="active" href="/registe">免费注册</a>

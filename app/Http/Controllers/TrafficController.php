@@ -22,7 +22,7 @@ class TrafficController extends Controller
         if (!$session_data) {
             return redirect('/login');
         }
-        // return view('traffic', ['s' => $session_data]);
+        return view('traffic', ['s' => $session_data]);
 
         // debug
         $type = 'global';
