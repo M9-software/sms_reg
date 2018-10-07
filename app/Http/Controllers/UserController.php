@@ -43,16 +43,16 @@ class UserController extends Controller
         $passwd = $request->input('passwd');
         $user['merTel'] = $mobile;
         $user['merPassWord'] = $passwd;
-        $user['merMac'] = '123456';
+        $user['merMac'] = '';
+        $user['merChannel'] = '2';  // 渠道（1、app；2、官网；3、小程序）
 
-        $api_url = $this->api_host.'/XCJPro/LoginDServlet';
+        $api_url = $this->api_host.'/XCJPro/LoginDChannelServlet';
         $result = $this->curl_json($api_url, $user);
         $data = json_decode($result, true);
 
         if ($data['code'] == '00000') {
             // 设置SESSION跳转
-            $session_key = 'xingJuYuan_User.session';
-            session([$session_key => $result]);
+            $this->set_session($result);
             return redirect('/');
         } else {
             return redirect('/login')->with('message', $data['responseMsg']);
@@ -66,13 +66,14 @@ class UserController extends Controller
         $cfm_qrcode = $request->input('cfm_qrcode');
         $passwd = $request->input('passwd');
 
-        $user['operType'] = '1';
+        $user['operType'] = '1';    // 操作类型  1.注册；2.忘记密码
         $user['merTel'] = $mobile;
         $user['merIdCode'] = $cfm_qrcode;
         $user['merPassWord'] = $passwd;
-        $user['merMac'] = '12345';
+        $user['merMac'] = '';
+        $user['merChannel'] = '2';  // 渠道（1、app；2、官网；3、小程序）
 
-        $api_url = $this->api_host.'/XCJPro/LoginServlet';
+        $api_url = $this->api_host.'/XCJPro/LoginChannelServlet';
         $result = $this->curl_json($api_url, $user);
         $data = json_decode($result, true);
 
@@ -81,33 +82,6 @@ class UserController extends Controller
             return redirect('/login');
         }
         return [];
-    }
-
-    private function curl_get($url)
-    {
-        $ch = curl_init();
-        curl_setopt($ch, CURLOPT_URL, $url);
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-        curl_setopt($ch, CURLOPT_HEADER, 0);
-        $output = curl_exec($ch);
-        curl_close($ch);
-        return $output;
-    }
-
-    private function curl_json($url, $data)
-    {
-        $data_string = json_encode($data);
-        $ch = curl_init($url);
-        curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
-        curl_setopt($ch, CURLOPT_POSTFIELDS, $data_string);
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-        curl_setopt($ch, CURLOPT_HTTPHEADER, array(
-            'Content-Type: application/json',
-            'Content-Length: ' . strlen($data_string))
-        );
-        $output = curl_exec($ch);
-        curl_close($ch);
-        return $output;
     }
 
 }

@@ -24,3 +24,4 @@ Route::get('/qrcode', 'UserController@qrcode');
 Route::post('/user/login', 'UserController@login');
 Route::post('/user/registe', 'UserController@registe');
 
+Route::get('/traffic', 'TrafficController@query');
